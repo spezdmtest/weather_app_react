@@ -19,6 +19,7 @@ const WeatherApp = () => {
       );
       const data = await response.json();
       setWeatherData(data);
+      console.log(data);
     } catch (err) {
       console.log("Error fetching data: ", err);
     }
@@ -40,6 +41,12 @@ const WeatherApp = () => {
                   <span>{weatherData.location.name}</span>
                 </div>
               </div>
+              {/* <div className="city-info">
+                <div className="top-left">
+                  <img className="icon" src={`./img/${weatherData.current.weather_icons[0]}`} alt="" />
+                  <div className="description">{weatherData.current.weather_description[0]}</div> 
+                </div>
+              </div> */}
             </div>
           </div>
         ) : (
