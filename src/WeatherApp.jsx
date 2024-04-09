@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import Loader from "./img/loader.gif";
+// import Loader from "./img/loader.gif";
 
 const WeatherApp = () => {
   const [city, setCity] = useState("");
@@ -10,6 +10,13 @@ const WeatherApp = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      // const query = loacalStorage
+    } catch {}
+  };
+  return <div id="app"></div>;
 };
 
 // function WeatherApp() {
