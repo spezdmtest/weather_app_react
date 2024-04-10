@@ -60,17 +60,17 @@ const WeatherData = ({ data, togglePopup }) => {
           />
           <AllWeatherProperties
             title="wind speed"
-            value={`${data.current.windSpeed} km/h`}
+            value={`${data.current.wind_speed} km/h`}
             icon="wind.png"
           />
           <AllWeatherProperties
             title="pressure"
-            value={`${data.current.pressure} %`}
+            value={`${data.current.pressure} hPa`}
             icon="gauge.png"
           />
           <AllWeatherProperties
-            title="uvIndex"
-            value={`${data.current.uvIndex} / 100`}
+            title="uv index"
+            value={`${data.current.uv_index} / 100`}
             icon="uv-index.png"
           />
           <AllWeatherProperties

@@ -225,7 +225,7 @@ img {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    color: #000000;
+    color: #ffffff;
   }
   
   .property-info__description {
@@ -237,7 +237,7 @@ img {
     margin-top: 3px;
   }
   
-  .properties {
+  #properties {
     position: relative;
     z-index: 1;
     padding: 18px;
