@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherProperty from "./WeatherProperty";
+import AllWeatherProperties from "./AllWeatherProperties";
 
 const WeatherData = ({ data, togglePopup }) => {
   const getImage = (description) => {
@@ -20,7 +21,7 @@ const WeatherData = ({ data, togglePopup }) => {
       default:
         return "the.png";
     }
-  }
+  };
 
   return (
     <div className="container">
@@ -42,6 +43,38 @@ const WeatherData = ({ data, togglePopup }) => {
             description={data.current.weather_descriptions[0]}
             temperature={data.current.temperature}
             localtime={data.location.localtime}
+          />
+        </div>
+        <div id="properties">
+          <AllWeatherProperties
+            title="cloud cover"
+            value={`${data.current.cloudcover} %`}
+            icon="cloud.png"
+          />
+          <AllWeatherProperties
+            title="humidity"
+            value={`${data.current.humidity} %`}
+            icon="humidity.png"
+          />
+          <AllWeatherProperties
+            title="wind speed"
+            value={`${data.current.windSpeed} km/h`}
+            icon="wind.png"
+          />
+          <AllWeatherProperties
+            title="pressure"
+            value={`${data.current.pressure} %`}
+            icon="gauge.png"
+          />
+          <AllWeatherProperties
+            title="uvIndex"
+            value={`${data.current.uvIndex} / 100`}
+            icon="uv-index.png"
+          />
+          <AllWeatherProperties
+            title="visibility"
+            value={`${data.current.visibility} %`}
+            icon="visibility.png"
           />
         </div>
       </div>
