@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-// import Loader from "/img/loader.gif";
 import WeatherData from "./components/WeatherData";
 import Loader from "./components/Loader";
 
@@ -44,13 +43,5 @@ const WeatherApp = () => {
     </div>
   );
 };
-
-// function WeatherApp() {
-//   return (
-//     <div>
-//       <h1>Weather App</h1>
-//     </div>
-//   );
-// }
 
 export default WeatherApp;
