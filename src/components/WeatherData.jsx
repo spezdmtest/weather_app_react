@@ -2,7 +2,6 @@ import React from "react";
 import WeatherProperty from "./WeatherProperty";
 
 const WeatherData = ({ data, togglePopup }) => {
-  const description = "data.current.weather_descriptions[0]";
   const getImage = (description) => {
     const value = description.toLowerCase();
     switch (value) {
