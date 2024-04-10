@@ -23,8 +23,10 @@ const WeatherData = ({ data, togglePopup }) => {
     }
   };
 
+  const containerClass = data.current.is_day === "yes" ? "is-day" : "";
+
   return (
-    <div className="container">
+    <div className={`container ${containerClass}`}>
       <div className="top">
         <div className="city">
           {/* Відображення назви міста та можливість відкрити спливаюче вікно */}

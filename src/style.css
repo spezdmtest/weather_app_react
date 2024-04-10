@@ -237,7 +237,7 @@ img {
     margin-top: 3px;
   }
   
-  #properties {
+  .properties {
     position: relative;
     z-index: 1;
     padding: 18px;
