@@ -42,7 +42,7 @@ const WeatherData = ({ data, togglePopup }) => {
             icon={getImage(data.current.weather_descriptions[0])}
             description={data.current.weather_descriptions[0]}
             temperature={data.current.temperature}
-            observationTime={data.current.observation_time}
+            localtime={data.location.localtime}
           />
         </div>
       </div>
