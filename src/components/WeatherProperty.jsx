@@ -8,6 +8,7 @@ const WeatherProperty = ({
 }) => {
   return (
     <div className="top-left">
+      {/* Відображення ікони, опису погоди, температури та часу спостереження */}
       <img
         className="icon"
         src={`/img/${icon}`}

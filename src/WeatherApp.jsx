@@ -34,6 +34,7 @@ const WeatherApp = () => {
   return (
     <div id="weather-app">
       <div id="root">
+        {/* Показуємо або компонент з даними погоди, або індикатор завантаження */}
         {weatherData ? (
          <WeatherData data={weatherData} togglePopup={togglePopup} />
         ) : (
