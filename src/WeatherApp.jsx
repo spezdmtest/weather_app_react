@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import Loader from "/img/loader.gif";
+// import Loader from "/img/loader.gif";
+import WeatherData from "./components/Weather";
+import Loader from "./components/Loader";
 
 const WeatherApp = () => {
   const [city, setCity] = useState("");
@@ -33,28 +35,9 @@ const WeatherApp = () => {
     <div id="weather-app">
       <div id="root">
         {weatherData ? (
-          <div className="container">
-            <div className="top">
-              <div className="city">
-                <div className="city-subtitle">Weather Today in</div>
-                <div className="city-title" id="city" onClick={togglePopup}>
-                  <span>{weatherData.location.name}</span>
-                </div>
-              </div>
-              {/* <div className="city-info">
-                <div className="top-left">
-                  <img className="icon" src={`./img/${weatherData.current.weather_icons[0]}`} alt="" />
-                  <div className="description">{weatherData.current.weather_description[0]}</div> 
-                </div>
-              </div> */}
-            </div>
-          </div>
+         <WeatherData data={weatherData} togglePopup={togglePopup} />
         ) : (
-          <img
-            className="loader"
-            src={Loader}
-            alt="loader"
-          />
+         <Loader />
         )}
       </div>
     </div>
