@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 // import Loader from "/img/loader.gif";
-import WeatherData from "./components/Weather";
+import WeatherData from "./components/WeatherData";
 import Loader from "./components/Loader";
 
 const WeatherApp = () => {
