@@ -1,6 +1,28 @@
 import React from "react";
+import WeatherProperty from "./WeatherProperty";
 
 const WeatherData = ({ data, togglePopup }) => {
+  const description = "data.current.weather_descriptions[0]";
+  const getImage = (description) => {
+    const value = description.toLowerCase();
+    switch (value) {
+      case "patchy rain nearby":
+        return "cloud.png";
+      case "cloud":
+        return "cloud.png";
+      case "overcast":
+        return "cloud.png";
+      case "fog":
+        return "fog.png";
+      case "sunny":
+        return "sunny.png";
+      case "partly cloudy":
+        return "partly.png";
+      default:
+        return "the.png";
+    }
+  }
+
   return (
     <div className="container">
       <div className="top">
@@ -13,6 +35,15 @@ const WeatherData = ({ data, togglePopup }) => {
             onClick={togglePopup}>
             <span>{data.location.name}</span>
           </div>
+        </div>
+        <div className="city-info">
+          {/* Передача даних про погоду в компонент WeatherProperty */}
+          <WeatherProperty
+            icon={getImage(data.current.weather_descriptions[0])}
+            description={data.current.weather_descriptions[0]}
+            temperature={data.current.temperature}
+            observationTime={data.current.observation_time}
+          />
         </div>
       </div>
     </div>
