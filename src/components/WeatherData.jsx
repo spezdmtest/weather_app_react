@@ -27,7 +27,7 @@ const WeatherData = ({ data, togglePopup }) => {
       <div className="top">
         <div className="city">
           {/* Відображення назви міста та можливість відкрити спливаюче вікно */}
-          <div className="city-subtitle">Погода сьогодні в</div>
+          <div className="city-subtitle">Weather Today in</div>
           <div
             className="city-title"
             id="city"

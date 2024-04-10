@@ -15,7 +15,7 @@ const WeatherProperty = ({
         alt=""
       />
       <div className="description">{description}</div>
-      <div className="city-info__subtitle">Актуально на: {localtime}</div>
+      <div className="city-info__subtitle">as of {localtime}</div>
       <div className="city-info__title">{temperature}°</div>
     </div>
   );
