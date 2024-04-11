@@ -54,6 +54,7 @@ const WeatherApp = () => {
           <Loader />
         )}
       </div>
+      {/* Показуємо спливаюче вікно тільки якщо воно активне */}
       {popupActive && (
         <Popup
           city={city}
