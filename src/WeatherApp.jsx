@@ -36,7 +36,7 @@ const WeatherApp = () => {
     localStorage.setItem("query", city);
     fetchData();
     setPopupActive(false);
-  }
+  };
 
   const togglePopup = () => {
     setPopupActive(!popupActive);
@@ -56,7 +56,13 @@ const WeatherApp = () => {
         )}
       </div>
       {popupActive && (
-        <Popup city={city} handleInputChange={handleInputChange} handleSubmit={handleSubmit} togglePopup={togglePopup} />
+        <Popup
+          city={city}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+          popupActive={popupActive}
+          togglePopup={togglePopup}
+        />
       )}
     </div>
   );

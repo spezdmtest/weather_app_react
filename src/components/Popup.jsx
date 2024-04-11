@@ -1,9 +1,14 @@
-import React from "react"
+import React from "react";
 
-const Popup = ({city, handleInputChange, handleSubmit, togglePopup}) => {
-    return (
-        <div className="popup" id="popup">
-      <form onSubmit={handleSubmit} className="form" id="form">
+const Popup = ({ city, handleInputChange, handleSubmit, popupActive, togglePopup }) => {
+  return (
+    <div
+      className={`popup ${popupActive ? "active" : ""}`}
+      id="popup">
+      <form
+        onSubmit={handleSubmit}
+        className="form"
+        id="form">
         <div className="form-group">
           <input
             type="text"
@@ -23,11 +28,14 @@ const Popup = ({city, handleInputChange, handleSubmit, togglePopup}) => {
           />
         </div>
       </form>
-      <div className="popup-close" id="close" onClick={togglePopup}>
+      <div
+        className="popup-close"
+        id="close"
+        onClick={togglePopup}>
         <span></span>
       </div>
     </div>
   );
-}
+};
 
 export default Popup;
