@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import WeatherData from "./components/WeatherData";
 import Loader from "./components/Loader";
+import Popup from "./components/Popup";
 
 const WeatherApp = () => {
   const [city, setCity] = useState("");
@@ -26,20 +27,37 @@ const WeatherApp = () => {
     }
   };
 
+  const handleInputChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    localStorage.setItem("query", city);
+    fetchData();
+    setPopupActive(false);
+  }
+
   const togglePopup = () => {
     setPopupActive(!popupActive);
   };
 
   return (
-    <div id="weather-app">
+    <div id="app">
       <div id="root">
         {/* Показуємо або компонент з даними погоди, або індикатор завантаження */}
         {weatherData ? (
-         <WeatherData data={weatherData} togglePopup={togglePopup} />
+          <WeatherData
+            data={weatherData}
+            togglePopup={togglePopup}
+          />
         ) : (
-         <Loader />
+          <Loader />
         )}
       </div>
+      {popupActive && (
+        <Popup city={city} handleInputChange={handleInputChange} handleSubmit={handleSubmit} togglePopup={togglePopup} />
+      )}
     </div>
   );
 };
