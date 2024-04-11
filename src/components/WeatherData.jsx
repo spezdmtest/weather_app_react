@@ -38,7 +38,6 @@ const WeatherData = ({ data, togglePopup }) => {
             <span>{data.location.name}</span>
           </div>
         </div>
-        <div className="city-info">
           {/* Передача даних про погоду в компонент WeatherProperty */}
           <WeatherProperty
             icon={getImage(data.current.weather_descriptions[0])}
@@ -46,7 +45,6 @@ const WeatherData = ({ data, togglePopup }) => {
             temperature={data.current.temperature}
             localtime={data.location.localtime}
           />
-        </div>
         <div id="properties">
           <AllWeatherProperties
             title="cloud cover"
