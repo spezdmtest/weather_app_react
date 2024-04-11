@@ -21,7 +21,6 @@ const WeatherApp = () => {
       );
       const data = await response.json();
       setWeatherData(data);
-      console.log(data);
     } catch (err) {
       console.log("Error fetching data: ", err);
     }
